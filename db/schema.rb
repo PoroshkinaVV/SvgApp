@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20160703190147) do
 
   create_table "computer_geometries", force: :cascade do |t|
     t.point    "c_coordinates", null: false, array: true
+    t.integer  "front_point",   null: false
     t.integer  "computer_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
@@ -69,6 +70,7 @@ ActiveRecord::Schema.define(version: 20160703190147) do
 
   create_table "desk_geometries", force: :cascade do |t|
     t.point    "d_coordinates", null: false, array: true
+    t.integer  "front_point",   null: false, array: true
     t.integer  "desk_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
