@@ -1,0 +1,7 @@
+<body>
+<svg height="250" width="250">
+  <polygon points="#{a_g.a_coordinates}" 
+style="fill:yellow; 
+stroke:black; stroke-width:0.5"/>
+</svg>
+</body>

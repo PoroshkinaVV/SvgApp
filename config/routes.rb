@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   resources :buildings
-  resources :buildings_geometries
+  resources :building_geometries
   resources :auditories
   resources :auditory_geometries
   resources :desks

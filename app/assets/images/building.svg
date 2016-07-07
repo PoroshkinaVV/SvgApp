@@ -1,0 +1,11 @@
+<html>
+<body>
+<%= render :index, object: @buildings %>
+<svg height="250" width="250">
+  <polygon points="0,0 210,0 210,210 0,210" style="fill:brown; 
+stroke:black; stroke-width:0.5" />
+<!--  <%= inline_svg ('auditory.svg') %> --> 
+</svg>
+  <%= inline_svg ('auditory.svg') %> 
+</body>
+</html>
