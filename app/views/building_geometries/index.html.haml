@@ -1,3 +1,5 @@
 %h1 Buildings
 - @building_geometries.each do |b_g|
-  = b_g.b_coordinates.join
+  %svg{height: 250, width: 250}
+    %polygon{points: "#{b_g.b_coordinates_array.flatten.join(', ')}", style: "fill:brown; stroke:black; stroke-width:0.5"}
+    

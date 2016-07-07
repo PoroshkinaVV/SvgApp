@@ -6,6 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-b = Building.create(id: 1, name: "k")
+b = Building.create(name: "k")
 BuildingGeometry.create(building_id: b.id, b_coordinates: 
-'0,0,210,10,210,210,10,210')
+[0,0])

@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20160703190147) do
   add_index "auditory_geometries", ["auditory_id"], name: "index_auditory_geometries_on_auditory_id", using: :btree
 
   create_table "building_geometries", force: :cascade do |t|
-    t.point    "b_coordinates", null: false, array: true
+    t.string   "b_coordinates", null: false
     t.integer  "building_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
