@@ -1,8 +1,8 @@
 class CreateDeskGeometries < ActiveRecord::Migration
   def change
     create_table :desk_geometries do |t|
-      t.point :d_coordinates, null: false, array: true
-      t.integer :front_point, null: false, array: true
+      t.column :d_coordinates, :polygon, null: false
+      t.integer :front_point, null: false
       t.references :desk, index: true, foreign_key: true
 
       t.timestamps null: false

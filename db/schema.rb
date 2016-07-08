@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20160703190147) do
   add_index "auditories", ["building_id"], name: "index_auditories_on_building_id", using: :btree
 
   create_table "auditory_geometries", force: :cascade do |t|
-    t.point    "a_coordinates", null: false, array: true
+    t.string   "a_coordinates", null: false
     t.integer  "auditory_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20160703190147) do
   end
 
   create_table "computer_geometries", force: :cascade do |t|
-    t.point    "c_coordinates", null: false, array: true
+    t.string   "c_coordinates", null: false
     t.integer  "front_point",   null: false
     t.integer  "computer_id"
     t.datetime "created_at",    null: false
@@ -69,8 +69,8 @@ ActiveRecord::Schema.define(version: 20160703190147) do
   add_index "computers", ["desk_id"], name: "index_computers_on_desk_id", using: :btree
 
   create_table "desk_geometries", force: :cascade do |t|
-    t.point    "d_coordinates", null: false, array: true
-    t.integer  "front_point",   null: false, array: true
+    t.string   "d_coordinates", null: false
+    t.integer  "front_point",   null: false
     t.integer  "desk_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false

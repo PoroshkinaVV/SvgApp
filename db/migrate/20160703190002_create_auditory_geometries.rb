@@ -1,7 +1,7 @@
 class CreateAuditoryGeometries < ActiveRecord::Migration
   def change
     create_table :auditory_geometries do |t|
-      t.point :a_coordinates, null: false, array: true
+      t.column :a_coordinates, :polygon, null: false
       t.references :auditory, index: true, foreign_key: true
 
       t.timestamps null: false

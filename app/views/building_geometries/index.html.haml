@@ -1,5 +1,7 @@
 %h1 Buildings
 - @building_geometries.each do |b_g|
-  %svg{height: 250, width: 250}
-    %polygon{points: "#{b_g.b_coordinates_array.flatten.join(', ')}", style: "fill:brown; stroke:black; stroke-width:0.5"}
-    
+  -AuditoryGeometry.all.each do |a_g|
+    %svg{height: 250, width: 250}
+      %polygon{points: "#{b_g.b_coordinates_array.flatten.join(', ')}", style: "fill:brown; stroke:black; stroke-width:0.5"}
+      %polygon{points: "#{a_g.a_coordinates_array.flatten.join(', ')}", style: "fill:green; stroke:black; stroke-width:0.5"}
+      = building = Building.all.find_by_id(b_g.building_id)
